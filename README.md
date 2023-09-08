@@ -15,12 +15,10 @@
   A React video player component for TV devices, with customisable buttons and spatial navigation for arrow-key focus.
   <br/>It can play a variety of URLs including file paths, YouTube, SoundCloud, HLS and Dash streams.
 </p>
+<br/>
 
-<p align="center">
-  <a href='https://www.npmjs.com/package/react-tv-player'>
-    <img width="80%" height="80%" src="https://github.com/lewhunt/react-tv-player/assets/9886284/cde7b054-8313-4e65-8471-997a08af87cd">
-  </a>
-</p>
+  [![https://lewhunt.github.io/react-tv-player](https://github.com/lewhunt/react-tv-player/assets/9886284/cde7b054-8313-4e65-8471-997a08af87cd)](https://lewhunt.github.io/react-tv-player)
+
 
 ### Usage
 
@@ -38,7 +36,7 @@ import { TVPlayer } from "react-tv-player";
 
 ### Demo App
 
-The sample demo app illustrates how the component can be initialised with custom buttons and multiple media, which enables the user to cycle through media with next/previous buttons and handle actions such as the Like button. Short video of demo below.
+The <a href='https://lewhunt.github.io/react-tv-player/'>sample demo app</a> illustrates how the component can be initialised with custom buttons and multiple media, which enables the user to cycle through media with next/previous buttons and handle actions such as the Like button. Short video of demo below.
 
 ```jsx
 <TVPlayer
@@ -53,8 +51,6 @@ The sample demo app illustrates how the component can be initialised with custom
 ```
 
 https://github.com/lewhunt/react-tv-player/assets/9886284/82e7d24e-f022-49d1-8059-129058286edd
-
-<a href="">Link to Demo</a>
 
 ### Props
 
