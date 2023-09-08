@@ -47,8 +47,11 @@ The <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>s
 />
 ```
 
-A short video of demo app:
-https://github.com/lewhunt/react-tv-player/assets/9886284/82e7d24e-f022-49d1-8059-129058286edd
+A short video of the demo app:
+
+https://github.com/lewhunt/react-tv-player/assets/9886284/7baa4b75-491b-49f3-8cf1-698ae7f55941
+
+
 
 ### Props
 
