@@ -18,8 +18,8 @@
 
 <p align="center">
   <a href='https://www.npmjs.com/package/react-tv-player'>
-  <picture><img width="80%" height="80%" src="https://github.com/lewhunt/react-tv-player/assets/9886284/aafe29a5-7dac-41f0-b48c-2de0597e016e"></picture>
-    </a>
+    <picture><img width="80%" height="80%" src="https://github.com/lewhunt/react-tv-player/assets/9886284/cde7b054-8313-4e65-8471-997a08af87cd"></picture>
+  </a>
 </p>
 
 ### Usage
@@ -52,7 +52,7 @@ The sample demo app illustrates how the component can be initialised with custom
 />
 ```
 
-https://github.com/lewhunt/react-tv-player/assets/9886284/0bac2e0b-fe6c-4072-9525-9035fe1ac660
+https://github.com/lewhunt/react-tv-player/assets/9886284/82e7d24e-f022-49d1-8059-129058286edd
 
 <a href="">Link to Demo</a>
 
