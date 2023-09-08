@@ -14,7 +14,7 @@ export type MediaType = {
 const mediaList: MediaType[] = [
   {
     url: "https://www.youtube.com/watch?v=SkVqJ1SGeL0",
-    title: "YouTube URL Sample",
+    title: "YouTube Video Sample",
     subTitle: "Caminandes 3: Llamigos",
     preview: true,
   },
