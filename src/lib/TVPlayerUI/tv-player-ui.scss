@@ -1,0 +1,370 @@
+@function vw($px-vw, $base-vw: 1920px) {
+  @return calc(($px-vw * 100vw) / $base-vw);
+}
+
+$buttons-height: 60px;
+$padding-tb: 40px;
+$padding-lr: 50px;
+$large-screen-size: 1600px;
+$medium-screen-size: 1200px;
+$small-screen-size: 600px;
+
+.tv-player-ui {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: vw($padding-tb) vw($padding-lr);
+
+  &__cover {
+    transition: opacity 0.3s;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 78%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &.hide {
+      opacity: 0;
+    }
+    &.with-top-cover {
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.97) 5%,
+        rgba(0, 0, 0, 0.6) 30%,
+        rgba(0, 0, 0, 0.58) 35%,
+        rgba(0, 0, 0, 0.6) 40%,
+        rgba(0, 0, 0, 0.98) 78%
+      );
+    }
+    &.light-cover {
+      background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 70%);
+
+      @media screen and (max-width: $medium-screen-size) and (orientation: landscape) {
+        background: linear-gradient(
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.9) 60%
+        );
+      }
+    }
+  }
+
+  .metadata-wrapper {
+    width: 84%;
+    text-align: center;
+    padding: vw(4px) 0;
+    margin: 0 auto;
+    animation: fadeInAnim ease-in-out 0.3s forwards;
+  }
+
+  .metadata {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(250, 250, 250);
+    padding: 0 vw($padding-lr);
+    pointer-events: none;
+    line-height: 1.4;
+
+    &--title {
+      font-size: vw(62px);
+      font-weight: 800;
+    }
+    &--subTitle {
+      font-size: vw(28px);
+      font-weight: 400;
+    }
+
+    @media screen and (max-width: $medium-screen-size) {
+      &--title {
+        font-size: vw(80px);
+      }
+      &--subTitle {
+        font-size: vw(40px);
+      }
+    }
+
+    @media screen and (max-width: $small-screen-size) {
+      &--title {
+        font-size: vw(120px);
+      }
+      &--subTitle {
+        font-size: vw(60px);
+      }
+    }
+  }
+
+  .buttons {
+    padding: vw($padding-tb) vw($padding-lr);
+    height: vw($buttons-height);
+    min-height: $buttons-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vw;
+    transition: all 0.3s;
+    border-top: 0.5px solid rgba(255, 255, 255, 0);
+    pointer-events: none;
+
+    > * {
+      display: flex;
+      gap: 3vw;
+    }
+
+    &__left {
+      margin-right: auto;
+    }
+
+    &__center {
+      position: absolute;
+    }
+
+    &__right {
+      margin-left: auto;
+    }
+
+    button {
+      position: relative;
+      pointer-events: auto;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-color: transparent;
+      color: white;
+      width: vw($buttons-height);
+      height: vw($buttons-height);
+      min-width: calc($buttons-height * 0.9);
+      min-height: calc($buttons-height * 0.9);
+      cursor: pointer;
+      transition: all 0.3s;
+      outline: none;
+
+      small {
+        position: absolute;
+        transform: translateY(50px);
+        left: -50%;
+        width: 200%;
+        opacity: 0;
+        transition: all 0.3s;
+        font-size: 18px;
+        z-index: 1;
+
+        @media screen and (min-width: $large-screen-size) {
+          transform: translateY(54px);
+          font-size: 20px;
+        }
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &.focused {
+        border-color: rgb(250, 250, 250);
+        outline: none;
+
+        small {
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: $small-screen-size) {
+        min-width: calc($buttons-height * 0.65);
+        min-height: calc($buttons-height * 0.65);
+
+        &.focused {
+          small {
+            opacity: 0;
+          }
+        }
+        svg {
+          font-size: 16px !important;
+        }
+      }
+
+      &.selected-dot {
+        position: relative;
+        &::before {
+          content: ".";
+          position: absolute;
+          bottom: -4px;
+          left: 38%;
+          font-size: 40px;
+        }
+      }
+
+      &.selected-fill {
+        background-color: rgb(50, 50, 50);
+      }
+
+      svg {
+        font-size: 24px;
+
+        &.fa-play {
+          padding-left: 3px;
+        }
+
+        &.fa-backward {
+          margin-left: -3px;
+        }
+
+        &.fa-forward {
+          margin-left: 3px;
+        }
+
+        &.fa-info {
+          margin-bottom: 2px;
+          font-size: 16px;
+        }
+
+        &.fa-volume-xmark {
+          margin-left: -2px;
+        }
+
+        &.fa-circle-info {
+          font-size: 28px;
+          path {
+            fill: rgba(255, 255, 255, 0.9);
+          }
+        }
+      }
+    }
+  }
+
+  .progress-bar {
+    padding: 0 calc(vw($padding-lr) - 4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $buttons-height;
+    gap: vw(22px);
+    transition: opacity 0.3s;
+
+    &.hide {
+      opacity: 0;
+    }
+
+    &:not(.hide) {
+      animation: fadeInAnim ease-in-out 0.3s forwards;
+    }
+
+    .time {
+      color: rgba(250, 250, 250);
+      font-size: 18px;
+      font-weight: 600;
+      min-height: 24px;
+      min-width: 70px;
+      text-align: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--duration {
+        text-align: right;
+      }
+
+      @media screen and (max-width: $small-screen-size) {
+        font-size: 14px;
+      }
+      @media screen and (min-width: $large-screen-size) {
+        font-size: 20px;
+      }
+    }
+
+    .bar-wrapper {
+      flex: 1;
+      cursor: pointer;
+      .bar {
+        position: relative;
+        height: vw(8px);
+        border-radius: vw(4px);
+        background-color: rgb(25, 25, 25);
+        margin: vw(12px) 0;
+
+        @media screen and (max-width: $small-screen-size) {
+          height: vw(12px);
+        }
+
+        .fill {
+          background-color: rgb(250, 250, 250);
+          position: absolute;
+          left: 0;
+          height: 100%;
+          border-radius: vw(4px);
+          opacity: 0.8;
+          transition: all 0.3s;
+        }
+
+        .progress-bar-button {
+          position: absolute;
+          background-color: rgb(250, 250, 250);
+          position: absolute;
+          border-radius: 50%;
+          width: vw(16px);
+          height: vw(16px);
+          padding: vw(4px);
+          margin: vw(4px);
+          top: vw(-8px);
+          margin-left: vw(-16px);
+          border: vw(4px) solid transparent;
+          transition: all 0.3s;
+          transform: scale(1.2);
+          z-index: 1;
+          cursor: pointer;
+          pointer-events: none;
+
+          @media screen and (max-width: $medium-screen-size) {
+            width: vw(24px);
+            height: vw(24px);
+            top: vw(-13px);
+          }
+          @media screen and (max-width: $small-screen-size) {
+            width: vw(32px);
+            height: vw(32px);
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: vw(-10px);
+            right: vw(-10px);
+            bottom: vw(-10px);
+            left: vw(-10px);
+            border: vw(2px) solid transparent;
+            border-radius: 50%;
+            transition: all 0.3s;
+          }
+
+          &.focused,
+          &:hover {
+            transform: scale(1.6);
+          }
+
+          &.focused::before {
+            border-color: rgb(250, 250, 250);
+          }
+        }
+      }
+      &.focused,
+      &:hover {
+        .progress-bar-button {
+          transform: scale(1.6);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
