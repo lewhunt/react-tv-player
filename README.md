@@ -15,7 +15,7 @@
   A React video player component for TV devices, with customisable buttons and spatial navigation for arrow-key focus. It can play a variety of URLs including file paths, YouTube, SoundCloud, HLS and Dash streams.
 </p>
 
-[![https://lewhunt.github.io/react-tv-player](https://repository-images.githubusercontent.com/688997852/9d941108-171b-4be3-a032-0ca38a52cbf8)](https://lewhunt.github.io/react-tv-player)
+[![https://lewhunt.github.io/react-tv-player](https://repository-images.githubusercontent.com/688997852/fef11675-cc4f-413c-a19e-9fe5e1b91072)](https://lewhunt.github.io/react-tv-player)
 
 ### Usage
 
