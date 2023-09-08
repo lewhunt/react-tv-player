@@ -18,7 +18,7 @@
 
 <p align="center">
   <a href='https://www.npmjs.com/package/react-tv-player'>
-    <picture><img width="80%" height="80%" src="https://github.com/lewhunt/react-tv-player/assets/9886284/cde7b054-8313-4e65-8471-997a08af87cd"></picture>
+    <img width="80%" height="80%" src="https://github.com/lewhunt/react-tv-player/assets/9886284/cde7b054-8313-4e65-8471-997a08af87cd">
   </a>
 </p>
 
