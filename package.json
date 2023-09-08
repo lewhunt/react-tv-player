@@ -3,7 +3,7 @@
   "author": "Lewis Hunt",
   "description": "",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "homepage": "https://lewhunt.github.io/react-tv-player/",
   "repository": "https://github.com/lewhunt/react-tv-player.git",
