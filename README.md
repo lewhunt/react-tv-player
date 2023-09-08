@@ -12,8 +12,7 @@
 </p>
 
 <p align='center'>
-  A React video player component for TV devices, with customisable buttons and spatial navigation for arrow-key focus.
-  <br/>It can play a variety of URLs including file paths, YouTube, SoundCloud, HLS and Dash streams.
+  A React video player component for TV devices, with customisable buttons and spatial navigation for arrow-key focus. It can play a variety of URLs including file paths, YouTube, SoundCloud, HLS and Dash streams.
 </p>
 <br/>
 
