@@ -28,12 +28,12 @@ import React from "react";
 import { TVPlayer } from "react-tv-player";
 
 // Render a YouTube video player for TV
-<TVPlayer url="https://www.youtube.com/watch?v=LXb3EKWsInQ" />;
+<TVPlayer url="https://www.youtube.com/watch?v=SkVqJ1SGeL0" />;
 ```
 
 ### Demo App
 
-The <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>sample demo app</a> illustrates how the component can be initialised with custom buttons and multiple media, which enables the user to cycle through media with next/previous buttons and handle actions such as the Like button. A short video of demo app is below.
+The <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>sample demo app</a> illustrates how the component can be initialised with custom buttons and multiple media, which enables the user to cycle through media with next/previous buttons and handle actions such as the Like button.
 
 ```jsx
 <TVPlayer
@@ -47,6 +47,7 @@ The <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>s
 />
 ```
 
+A short video of demo app:
 https://github.com/lewhunt/react-tv-player/assets/9886284/82e7d24e-f022-49d1-8059-129058286edd
 
 ### Props
@@ -66,7 +67,7 @@ Media-controlled props such as `playing`, `loop` and `muted` are also mapped to 
 | `width`         | Set the width of the player                                                                                                                                                                                                                                                                                                      | `100%`       |
 | `height`        | Set the height of the player                                                                                                                                                                                                                                                                                                     | `100%`       |
 | `style`         | Add [inline styles](https://facebook.github.io/react/tips/inline-styles.html) to the root element                                                                                                                                                                                                                                | `{}`         |
-| `customButtons` | Specify a collection of [custom buttons](#custom-buttons) for the player UI <br />&nbsp; ◦ &nbsp;A set of <a href="https://github.com/lewhunt/react-tv-player/blob/8b5bb4491b0407af518be96261398e534b50e8dd/src/lib/TVPlayerUI/TVPlayerUI.tsx#L83-L90">default buttons</a> will be used otherwise.                          | `null`       |
+| `customButtons` | Specify a collection of [custom buttons](#custom-buttons) for the player UI <br />&nbsp; ◦ &nbsp;A set of <a href="https://github.com/lewhunt/react-tv-player/blob/8b5bb4491b0407af518be96261398e534b50e8dd/src/lib/TVPlayerUI/TVPlayerUI.tsx#L83-L90">default buttons</a> will be used otherwise.                               | `null`       |
 | `title`         | Set a `string` title for the current media.<br />&nbsp; ◦ &nbsp;Embedded media urls such as YouTube will attempt to pull in the default media title if not overridden here.                                                                                                                                                      |              |
 | `subTitle`      | Set a `string` sub-title for the current media.<br />&nbsp; ◦ &nbsp;Embedded media urls such as YouTube will attempt to pull in the default author name if not overridden here.                                                                                                                                                  |              |
 | `mediaCount`    | Set the total `number` of media items if you have multiple media and want player to display next and previous buttons                                                                                                                                                                                                            | `0`          |
@@ -116,7 +117,7 @@ const customButtons: TVPlayerButtonProps[] = [
 ];
 
 <TVPlayer
-  url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+  url="https://www.youtube.com/watch?v=SkVqJ1SGeL0"
   customButtons={customButtons}
 />;
 ```
@@ -163,7 +164,7 @@ const togglePlayback = () => {
 const customSeek = () => player.seekTo(player.getCurrentTime() + 10);
 
 <TVPlayer
-  url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+  url="https://www.youtube.com/watch?v=SkVqJ1SGeL0"
   onLikePress={handleLike}
 />;
 ```
