@@ -75,7 +75,7 @@ function App() {
         mediaCount={mediaList.length}
         mediaIndex={0}
         onLikePress={handleLike}
-        volume={undefined}
+        playsinline={true}
       />
     </>
   );

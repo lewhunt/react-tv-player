@@ -161,6 +161,7 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
         playing={playing}
         playbackRate={props.playbackRate}
         progressInterval={activity ? 200 : props.progressInterval}
+        playsinline={props.playsinline}
         volume={props.volume}
         onPlay={handlePlay}
         onReady={handleReady}

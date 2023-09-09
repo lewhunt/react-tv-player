@@ -206,6 +206,9 @@ $small-screen-size: 600px;
 
         &.fa-play {
           padding-left: 3px;
+          @media screen and (max-width: $small-screen-size) {
+            padding-left: 2px;
+          }
         }
 
         &.fa-backward {

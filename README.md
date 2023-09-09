@@ -45,7 +45,7 @@ The demo source code <a href='https://github.com/lewhunt/react-tv-player/blob/ma
   light={mediaList[mediaIndex].preview}
   customButtons={customButtons}
   mediaCount={mediaList.length}
-  onLike={handleLike}
+  onLikePress={handleLike}
 />
 ```
 
