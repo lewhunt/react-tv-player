@@ -12,10 +12,12 @@
 </p>
 
 <p align='center'>
-  A React video player component for TV devices, with customisable buttons and spatial navigation for arrow-key focus. It can play a variety of URLs including file paths, YouTube, SoundCloud, HLS and Dash streams.
+  A React video player component for TV devices, with customisable buttons and arrow key navigation. It can play a variety of URLs including file paths, YouTube, HLS and Dash streams.
 </p>
 
 [![https://lewhunt.github.io/react-tv-player](https://repository-images.githubusercontent.com/688997852/fef11675-cc4f-413c-a19e-9fe5e1b91072)](https://lewhunt.github.io/react-tv-player)
+
+<p align='center'><i>Click on the image to try out the demo on a desktop browser</i>
 
 ### Usage
 
@@ -31,9 +33,9 @@ import { TVPlayer } from "react-tv-player";
 <TVPlayer url="https://www.youtube.com/watch?v=SkVqJ1SGeL0" />;
 ```
 
-### Demo App
+### Demo Page
 
-The <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>sample demo app</a> illustrates how the component can be initialised with custom buttons and multiple media, which enables the user to cycle through media with next/previous buttons and handle actions such as the Like button.
+The demo source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as the Like button.
 
 ```jsx
 <TVPlayer
@@ -47,11 +49,9 @@ The <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>s
 />
 ```
 
-A short video of the demo app:
+<p>A short video of the <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> runnning on a browser:</p>
 
 https://github.com/lewhunt/react-tv-player/assets/9886284/7baa4b75-491b-49f3-8cf1-698ae7f55941
-
-
 
 ### Props
 
