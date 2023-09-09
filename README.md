@@ -103,6 +103,7 @@ As illustrated in the sample demo app, the player can be overridden with custom 
 
 ```jsx
 import { TVPlayer, TVPlayerButtonProps } from "react-tv-player";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const customButtons: TVPlayerButtonProps[] = [
   { action: "loop", align: "left" },
@@ -114,8 +115,11 @@ const customButtons: TVPlayerButtonProps[] = [
   {
     action: "custom",
     align: "right",
-    label: "More",
-    onPress: () => console.log("Custom 'More' button pressed"),
+    label: "About",
+    faIcon: faGithub,
+    onPress: () => {
+      window.location.href = "https://github.com/lewhunt/react-tv-player";
+    },
   },
 ];
 

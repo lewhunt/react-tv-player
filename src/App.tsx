@@ -1,4 +1,5 @@
 import { TVPlayer, useTVPlayerStore, TVPlayerButtonProps } from "./lib";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./App.css";
 
 // once built you can check the dist package locally:
@@ -38,7 +39,6 @@ function App() {
   const actions = useTVPlayerStore((s) => s.actions);
   const mediaIndex = useTVPlayerStore((s) => s.mediaIndex) || 0;
   const likeToggle = useTVPlayerStore((s) => s.likeToggle);
-  const customToggle = useTVPlayerStore((s) => s.customToggle);
 
   const customButtons: TVPlayerButtonProps[] = [
     { action: "loop", align: "left" },
@@ -50,9 +50,11 @@ function App() {
     {
       action: "custom",
       align: "right",
-      label: "Custom",
-      isSelectedFill: customToggle,
-      onPress: () => actions.setCustomToggle(!customToggle),
+      label: "About",
+      faIcon: faGithub,
+      onPress: () => {
+        window.location.href = "https://github.com/lewhunt/react-tv-player";
+      },
     },
   ];
 
