@@ -3,7 +3,7 @@
   "author": "Lewis Hunt",
   "description": "A React video player component for TV devices, with customisable buttons and arrow key navigation. It can play a variety of URLs including file paths, YouTube, HLS and Dash streams.",
   "private": false,
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "homepage": "https://lewhunt.github.io/react-tv-player",
   "repository": "https://github.com/lewhunt/react-tv-player.git",
@@ -90,6 +90,9 @@
     "youtube-player",
     "bigscreen",
     "remote-control",
-    "spatial-navigation"
+    "spatial-navigation",
+    "ott",
+    "iptv",
+    "leanback"
   ]
 }

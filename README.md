@@ -15,7 +15,7 @@
   A React video player component for TV devices, with customisable buttons and arrow key navigation. It can play a variety of URLs including file paths, YouTube, HLS and Dash streams.
 </p>
 
-[![https://lewhunt.github.io/react-tv-player](https://repository-images.githubusercontent.com/688997852/fef11675-cc4f-413c-a19e-9fe5e1b91072)](https://lewhunt.github.io/react-tv-player)
+[![https://lewhunt.github.io/react-tv-player](https://repository-images.githubusercontent.com/688997852/cc39ebd0-f663-4715-b502-eccb06cc4e57)](https://lewhunt.github.io/react-tv-player)
 
 <p align='center'><i>Click on the image to try out the demo on a desktop browser</i>
 
@@ -33,9 +33,25 @@ import { TVPlayer } from "react-tv-player";
 <TVPlayer url="https://www.youtube.com/watch?v=SkVqJ1SGeL0" />;
 ```
 
-### Demo Page
+### Background
 
-The demo source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as the Like button.
+In the dynamic landscape of the TV industry, I've dedicated years to working with various video players. During this journey, two persistent challenges surfaced time and again: UI navigation and streaming protocols. These hurdles often forced us to customize third-party players and wait for media content to be ready and correctly encoded, leading to added costs and frustrating delays. 😫
+
+#### Why React TV Player?
+
+Enter React TV Player, a game-changing library component that seamlessly integrates with your React applications. It brings forth a media player tailored for TV experiences, complete with intuitive arrow key navigation controls. 📺 🎮
+
+#### What Sets It Apart?
+
+But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos, eliminating the need for custom video encoding when it's not necessary. 🙌
+
+#### How Does It Work?
+
+Underneath the sleek exterior, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilizes <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze.
+
+### Demo
+
+The <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with metadata, custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as the Like button.
 
 ```jsx
 <TVPlayer
@@ -49,13 +65,13 @@ The demo source code <a href='https://github.com/lewhunt/react-tv-player/blob/ma
 />
 ```
 
-<p>A short video of the <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> runnning on a browser:</p>
+<p>Here is a short video of the <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> runnning on a browser:</p>
 
 https://github.com/lewhunt/react-tv-player/assets/9886284/7baa4b75-491b-49f3-8cf1-698ae7f55941
 
 ### Props
 
-Media-controlled props such as `playing`, `loop` and `muted` are also mapped to state which can be accessed via the [useTVPlayerStore hook](#usetvplayerstore-hook) instead of needing to directly update props.
+The full list of props are listed below. Media related values such as `playing`, `loop` and `muted` are also mapped to state which can be accessed via the [useTVPlayerStore hook](#usetvplayerstore-hook) instead of updating props.
 
 | Prop            | Description                                                                                                                                                                                                                                                                                                                      | Default      |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
