@@ -39,15 +39,15 @@ In the dynamic landscape of the TV industry, I've dedicated years to working wit
 
 #### Why React TV Player?
 
-Enter React TV Player, a game-changing library component that seamlessly integrates with your React applications. It brings forth a media player tailored for TV experiences, complete with intuitive arrow key navigation controls. 📺 🎮
+Enter React TV Player, an innovative open-source component that seamlessly integrates with your React applications. It brings forth a media player tailored for TV experiences, complete with intuitive arrow key navigation controls. 📺 🎮
 
 #### What Sets It Apart?
 
-But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos, eliminating the need for custom video encoding when it's not necessary. 🙌
+But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos - yes YouTube - eliminating the need for custom video encoding when it's not necessary. 🙌
 
 #### How Does It Work?
 
-Underneath the sleek exterior, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilizes <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze.
+Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilizes <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze.
 
 ### Demo
 
