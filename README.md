@@ -35,19 +35,19 @@ import { TVPlayer } from "react-tv-player";
 
 ### Background
 
-In the dynamic landscape of the TV industry, I've dedicated years to working with various video players. During this journey, two persistent challenges surfaced time and again: UI navigation and streaming protocols. These hurdles often forced us to customize third-party players and wait for media content to be ready and correctly encoded, leading to added costs and frustrating delays. 😫
+In the dynamic landscape of the TV industry, I've dedicated years to working with various video players. During this journey, two persistent challenges surfaced time and again: performant UI navigation and compatible streaming protocols. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
 
 #### Why React TV Player?
 
-Enter React TV Player, an innovative open-source component that seamlessly integrates with your React applications. It brings forth a media player tailored for TV experiences, complete with intuitive arrow key navigation controls. 📺 🎮
+Enter React TV Player, an innovative open-source component that seamlessly integrates with your React applications. It brings forth a media player tailored for TV experiences, complete with intuitive arrow key <i>and</i> cursor navigation. 📺 🎮
 
 #### What Sets It Apart?
 
-But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos - yes YouTube - eliminating the need for custom video encoding when it's not necessary. 🙌
+But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos - yes YouTube - eliminating the need for custom video encoding when it's not necessary. :tada:
 
 #### How Does It Work?
 
-Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilizes <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze.
+Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
 
 ### Demo
 
@@ -203,3 +203,15 @@ Use the state's `player` reference - as in the above example - to call instance 
 | `getSecondsLoaded()`   | Returns the number of seconds that have been loaded<br />&nbsp; ◦ &nbsp;Returns `null` if unavailable or unsupported                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `getDuration()`        | Returns the duration (in seconds) of the currently playing media<br />&nbsp; ◦ &nbsp;Returns `null` if duration is unavailable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `getInternalPlayer()`  | Returns the internal player of whatever is currently playing<br />&nbsp; ◦ &nbsp;eg the [YouTube player instance](https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player), or the [`<video>`](https://developer.mozilla.org/en/docs/Web/HTML/Element/video) element when playing a video file<br />&nbsp; ◦ &nbsp;Use `getInternalPlayer('hls')` to get the [hls.js](https://github.com/video-dev/hls.js) player<br />&nbsp; ◦ &nbsp;Use `getInternalPlayer('dash')` to get the [dash.js](https://github.com/Dash-Industry-Forum/dash.js) player<br />&nbsp; ◦ &nbsp;Returns `null` if the internal player is unavailable |
+
+### DRM Support
+
+You can use HLS AES Encryption, but it currently does not support Widevine, FairPlay or PlayReady DRM out of the box. However, when playing files it renders a `video` tag which can be accessed with the `getInternalPlayer()` instance method, mentioned above. So there is scope to hook into `hls.js` and `dash.js` for further DRM integration if desired. More work on this is on the future roadmap.
+
+### Device Support
+
+The library has been put through some initial testing on desktop web browsers and TV web app platforms such as Amazon FireTV, Samsung Tizen, Xbox UWP and LG webOS. More checks will be carried out over the next few months. Generally TV devices post-2018 will be better supported as they'll have more modern Chromium browsers.
+
+Due to various restrictions, React TV Player is not intended to work properly on smaller mobile devices. The UI is designed for widescreen displays and YouTube player documentation explains that certain mobile browsers require user interaction before playing.
+
+You can use a desktop browser with arrow-keys to simulate the TV experience.

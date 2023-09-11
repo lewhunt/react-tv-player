@@ -173,17 +173,19 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
         onProgress={handleProgress}
         onClickPreview={handlePreview}
         onError={handleError}
-        config={{
-          file: {
-            attributes: {
-              style: {
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
+        config={
+          props.config || {
+            file: {
+              attributes: {
+                style: {
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                },
               },
             },
-          },
-        }}
+          }
+        }
       />
       <img
         ref={ytPreviewRef}

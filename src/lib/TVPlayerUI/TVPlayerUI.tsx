@@ -4,6 +4,7 @@ import {
   useFocusable,
   FocusContext,
 } from "@noriginmedia/norigin-spatial-navigation";
+import { use100vh } from "react-div-100vh";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faForward,
@@ -60,6 +61,8 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
   const { focusKey, ref } = useFocusable();
 
   useTVPlayerActivity();
+
+  const div100vh = use100vh();
 
   const actions = useTVPlayerStore((s) => s.actions);
   const activity = useTVPlayerStore((s) => s.activity);
@@ -238,7 +241,10 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
     <div
       className="tv-player-ui"
       data-testid="tv-player-ui"
-      style={{ width: props.width || "100%", height: props.height || "100%" }}
+      style={{
+        width: props.width || "100%",
+        height: props.height || div100vh || "100%",
+      }}
     >
       <div
         className={cn("tv-player-ui__cover", {
