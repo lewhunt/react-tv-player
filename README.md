@@ -33,22 +33,6 @@ import { TVPlayer } from "react-tv-player";
 <TVPlayer url="https://www.youtube.com/watch?v=SkVqJ1SGeL0" />;
 ```
 
-### Background
-
-In the dynamic landscape of the TV industry, I've dedicated years to working with various video players. During this journey, two persistent challenges surfaced time and again: performant UI navigation and compatible streaming protocols. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
-
-#### Why React TV Player?
-
-Enter React TV Player, an innovative open-source component that seamlessly integrates with your React applications. It brings forth a media player tailored for TV experiences, complete with intuitive arrow key <i>and</i> cursor navigation. 📺 🎮
-
-#### What Sets It Apart?
-
-But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos - yes YouTube - eliminating the need for custom video encoding when it's not necessary. :tada:
-
-#### How Does It Work?
-
-Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
-
 ### Demo
 
 The <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with metadata, custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as the Like button.
@@ -69,9 +53,25 @@ The <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</
 
 https://github.com/lewhunt/react-tv-player/assets/9886284/7baa4b75-491b-49f3-8cf1-698ae7f55941
 
+### Background
+
+In the dynamic landscape of the TV industry, I've dedicated years to working with various video players. During this journey, two persistent challenges surfaced time and again: performant UI navigation and compatible streaming protocols. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
+
+#### Why React TV Player?
+
+Enter React TV Player, an innovative open-source component that seamlessly integrates with your React applications. It brings forth a media player tailored for TV experiences, complete with intuitive arrow key <i>and</i> cursor navigation. 📺 🎮
+
+#### What Sets It Apart?
+
+But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos - yes YouTube - eliminating the need for custom video encoding when it's not necessary. :tada:
+
+#### How Does It Work?
+
+Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
+
 ### Props
 
-The full list of props are listed below. Media related values such as `playing`, `loop` and `muted` are also mapped to state which can be accessed via the [useTVPlayerStore hook](#usetvplayerstore-hook) instead of updating props.
+The full list of props are below. Media related values such as `playing`, `loop` and `muted` are also mapped to state which can be accessed via the [useTVPlayerStore hook](#usetvplayerstore-hook) instead of updating props.
 
 | Prop            | Description                                                                                                                                                                                                                                                                                                                      | Default      |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
