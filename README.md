@@ -33,6 +33,14 @@ import { TVPlayer } from "react-tv-player";
 <TVPlayer url="https://www.youtube.com/watch?v=SkVqJ1SGeL0" />;
 ```
 
+### Key Features
+
+- <b>Versatility</b>: Customisable UI buttons, metadata and preview images to suit your needs. It can effortlessly handle a variety of URLs, from local file paths and HLS/DASH streams to services like YouTube and SoundCloud.
+- <b>Intuitive Navigation</b>: The player has been designed with TV experiences in mind. Arrow key and cursor navigation make the user experience smooth and intuitive across big-screen platforms.
+- <b>YouTube Integration</b>: One of its unique strengths is its ability to play YouTube videos directly, saving the cost and hassle of additional media encoding.
+- <b>DRM Considerations</b>: While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing future integration with hls.js and dash.js for more DRM considerations.
+- <b>Broad Device Support</b>: From Amazon FireTV and Samsung Tizen to Xbox UWP and LG webOS, ReactTVPlayer covers a vast landscape of devices, especially those post-2018 with modern Chromium browsers.
+
 ### Demo
 
 The <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with metadata, custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as the Like button.
@@ -52,14 +60,6 @@ The <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</
 <p>Here is a short video of the <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> runnning on a browser:</p>
 
 https://github.com/lewhunt/react-tv-player/assets/9886284/7baa4b75-491b-49f3-8cf1-698ae7f55941
-
-### Key Features
-
-- <b>Versatility</b>: Customisable UI buttons to suit your needs. It can effortlessly handle a variety of URLs, from local file paths and HLS/DASH streams to services like YouTube and SoundCloud.
-- <b>Intuitive Navigation</b>: The player has been designed with TV experiences in mind. Arrow key and cursor navigation make the user experience smooth and intuitive across platforms.
-- <b>YouTube Integration</b>: One of its unique strengths is its ability to play YouTube videos directly, saving the cost and hassle of additional media encoding.
-- <b>DRM Considerations</b>: While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing future integration with hls.js and dash.js for more DRM considerations.
-- <b>Broad Device Support</b>: From Amazon FireTV and Samsung Tizen to Xbox UWP and LG webOS, ReactTVPlayer covers a vast landscape of devices, especially those post-2018 with modern Chromium browsers.
 
 ### Props
 
