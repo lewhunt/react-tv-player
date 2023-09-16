@@ -12,7 +12,7 @@
 </p>
 
 <p align='center'>
-  A React video player component for TV devices, with customisable buttons and arrow key navigation. It can play a variety of URLs including file paths, YouTube, HLS and Dash streams.
+  A React media player component for TV devices, with customisable buttons and arrow key navigation. It can play a variety of URLs including file paths, YouTube, HLS and Dash streams.
 </p>
 
 [![https://lewhunt.github.io/react-tv-player](https://repository-images.githubusercontent.com/688997852/cc39ebd0-f663-4715-b502-eccb06cc4e57)](https://lewhunt.github.io/react-tv-player)
@@ -53,21 +53,13 @@ The <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</
 
 https://github.com/lewhunt/react-tv-player/assets/9886284/7baa4b75-491b-49f3-8cf1-698ae7f55941
 
-### Background
+### Key Features
 
-In the dynamic landscape of the TV industry, I've dedicated years to working with various video players. During this journey, two persistent challenges surfaced time and again: performant UI navigation and compatible streaming protocols. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
-
-#### Why React TV Player?
-
-Enter React TV Player, an innovative open-source component that seamlessly integrates with your React applications. It brings forth a media player tailored for TV experiences, complete with intuitive arrow key <i>and</i> cursor navigation. 📺 🎮
-
-#### What Sets It Apart?
-
-But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos - yes YouTube - eliminating the need for custom video encoding when it's not necessary. :tada:
-
-#### How Does It Work?
-
-Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
+- <b>Versatility</b>: Customisable UI buttons to suit your needs. It can effortlessly handle a variety of URLs, from local file paths and HLS/DASH streams to services like YouTube and SoundCloud.
+- <b>Intuitive Navigation</b>: The player has been designed with TV experiences in mind. Arrow key and cursor navigation make the user experience smooth and intuitive across platforms.
+- <b>YouTube Integration</b>: One of its unique strengths is its ability to play YouTube videos directly, saving the cost and hassle of additional media encoding.
+- <b>DRM Considerations</b>: While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing future integration with hls.js and dash.js for more DRM considerations.
+- <b>Broad Device Support</b>: From Amazon FireTV and Samsung Tizen to Xbox UWP and LG webOS, ReactTVPlayer covers a vast landscape of devices, especially those post-2018 with modern Chromium browsers.
 
 ### Props
 
@@ -206,7 +198,7 @@ Use the state's `player` reference - as in the above example - to call instance 
 
 ### DRM Support
 
-You can use HLS AES Encryption, but it currently does not support Widevine, FairPlay or PlayReady DRM out of the box. However, when playing files it renders a `video` tag which can be accessed with the `getInternalPlayer()` instance method, mentioned above. So there is scope to hook into `hls.js` and `dash.js` for further DRM integration if desired. More work on this is on the future roadmap.
+It supports HLS AES Encryption, but it currently does not support Widevine, FairPlay or PlayReady DRM out of the box. However, when playing streams it renders a `hls.js` and `dash.js` video element which can be accessed with the `getInternalPlayer()` instance method. So there is scope to hook into this for further DRM integration. More DRM work is on the future roadmap.
 
 ### Device Support
 
@@ -214,4 +206,20 @@ The library has been put through some initial testing on desktop web browsers an
 
 Due to various restrictions, React TV Player is not intended to work properly on smaller mobile devices. The UI is designed for widescreen displays and YouTube player documentation explains that certain mobile browsers require user interaction before playing.
 
-You can use a desktop browser with arrow-keys to simulate the TV experience.
+You can use a desktop/laptop browser with arrow-keys to simulate the TV experience.
+
+### Background
+
+In the dynamic landscape of the TV industry, I've dedicated years to working with various media players. During this journey, two persistent challenges surfaced time and again: performant UI navigation and compatible streaming protocols. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
+
+#### Why React TV Player?
+
+Enter React TV Player, an innovative open-source component that seamlessly integrates with your React applications. It brings forth a player tailored for TV experiences, complete with customisable UI buttons and intuitive arrow key <i>plus</i> cursor navigation. 📺 🎮
+
+#### What Sets It Apart?
+
+But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos - yes YouTube - eliminating the need for custom media encoding when it's not necessary. :tada:
+
+#### How Does It Work?
+
+Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
