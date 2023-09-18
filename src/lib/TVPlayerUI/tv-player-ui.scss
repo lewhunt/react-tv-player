@@ -33,7 +33,7 @@ $small-screen-size: 600px;
     }
     &.with-top-cover {
       background: linear-gradient(
-        rgba(0, 0, 0, 0.97) 5%,
+        rgba(0, 0, 0, 0.97) 0% 6%,
         rgba(0, 0, 0, 0.6) 30%,
         rgba(0, 0, 0, 0.58) 35%,
         rgba(0, 0, 0, 0.6) 40%,
@@ -57,6 +57,7 @@ $small-screen-size: 600px;
     text-align: center;
     padding: vw(4px) 0;
     margin: 0 auto;
+    pointer-events: none;
     animation: fadeInAnim ease-in-out 0.3s forwards;
   }
 
