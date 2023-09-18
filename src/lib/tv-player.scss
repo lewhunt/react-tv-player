@@ -2,11 +2,19 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
+}
+
+body,
+.tv-player {
   background: black;
+  :focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
 }
 
 .tv-player {
-  background: black;
   height: 100vh;
   /* full 100vh height or padding-top: 56.25%; // Player ratio: 100 / (1280 / 720) */
   position: relative;
