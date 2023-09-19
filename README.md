@@ -9,6 +9,10 @@
     <a href='https://github.com/lewhunt/react-tv-player/blob/main/LICENSE'>
     <img src='https://img.shields.io/badge/License-MIT-yellow.svg' alt='MIT License'>
   </a>
+    <a href='https://www.npmjs.com/package/react-tv-player'>
+    <img src='https://img.shields.io/npm/dm/react-tv-player.svg' alt='Monthly npm downloads'>
+  </a>
+
 </p>
 
 <p align='center'>

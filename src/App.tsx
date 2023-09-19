@@ -2,7 +2,7 @@ import { TVPlayer, useTVPlayerStore, TVPlayerButtonProps } from "./lib";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./App.css";
 
-// once built you can check the dist package locally:
+// locally testing built library
 //import { TVPlayer, useTVPlayerStore, TVPlayerButtonProps } from "./..";
 
 export type MediaType = {
