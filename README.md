@@ -23,11 +23,17 @@
 
 <p align='center'><i>Click on the image to try out the demo on a desktop browser</i>
 
-### Usage
+### Installation
+
+It has been built and published as an npm package for easy install:
 
 ```bash
 npm install react-tv-player
 ```
+
+### Basic Usage
+
+Then just import the player and render it in your App/Page:
 
 ```jsx
 import React from "react";
@@ -42,11 +48,9 @@ function App() {
 }
 ```
 
-<hr>
-
 ### [Live demo](https://lewhunt.github.io/react-tv-player/) (for desktop browsers)
 
-The <a href='https://lewhunt.github.io/react-tv-player/'>demo</a> source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with metadata, custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as the Like button.
+The <a href='https://lewhunt.github.io/react-tv-player/'>demo</a> source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with with more props such as metadata, custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as a Like button.
 
 ```jsx
 <TVPlayer
@@ -63,6 +67,20 @@ The <a href='https://lewhunt.github.io/react-tv-player/'>demo</a> source code <a
 <p>Here is a short video of the <a title="view demo" href="https://lewhunt.github.io/react-tv-player/">demo</a> runnning on a browser:</p>
 
 https://github.com/lewhunt/react-tv-player/assets/9886284/7baa4b75-491b-49f3-8cf1-698ae7f55941
+
+### Why another player?
+
+I've dedicated years working with various OTT players on TV devices. During this journey, two persistent challenges surfaced time and again: performant UI and compatible media encodings. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
+
+Enter ReactTVPlayer, an open-source component that aims to lower the barrier to entry and seamlessly integrates with your React applications.
+
+### What Sets It Apart?
+
+It's designed for TV experiences out of the box, complete with customisable UI buttons and intuitive arrow key plus cursor navigation. 🎮 In addition to handling HLS and Dash streams effortlessly, it tackles the formidable challenge of playing YouTube and Vimeo urls directly on TV. Supporting YouTube/Vimeo eliminates the need for custom media encoding when it's not always necessary or even affordable. 🎉
+
+### How Does It Work?
+
+Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
 
 <hr>
 
@@ -223,20 +241,6 @@ Note that it is not currently intended to work properly on smaller mobile device
 
 You can use a desktop/laptop browser with arrow-keys to simulate the TV experience.
 
-### Why another player?
+<hr />
 
-In the dynamic landscape of the OTT TV industry, I've dedicated years working with various players. During this journey, two persistent challenges surfaced time and again: performant UI and media encodings. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
-
-Enter ReactTVPlayer, an open-source component that aims to lower the barrier to entry and seamlessly integrates with your React applications...
-
-### What Sets It Apart?
-
-It's designed for TV experiences out of the box, complete with customisable UI buttons and intuitive arrow key plus cursor navigation. 🎮 In addition to handling HLS and Dash streams effortlessly, it tackles the formidable challenge of playing YouTube and Vimeo urls directly on TV. Supporting YouTube/Vimeo eliminates the need for custom media encoding when it's not always necessary or even affordable. 🎉
-
-### How Does It Work?
-
-Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
-
-<hr>
-
-### [Live Demo](https://lewhunt.github.io/react-tv-player/) (for desktop browsers)
+### [Try out the Demo](https://lewhunt.github.io/react-tv-player/) (on TV and desktop browsers)
