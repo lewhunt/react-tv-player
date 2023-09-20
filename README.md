@@ -19,7 +19,7 @@
   A React media player component for TV devices, with customisable buttons and arrow key navigation. It can play a variety of URLs including file paths, YouTube, HLS and Dash streams.
 </p>
 
-[![https://lewhunt.github.io/react-tv-player](https://repository-images.githubusercontent.com/688997852/cc39ebd0-f663-4715-b502-eccb06cc4e57)](https://lewhunt.github.io/react-tv-player)
+[![https://lewhunt.github.io/react-tv-player/](https://repository-images.githubusercontent.com/688997852/cc39ebd0-f663-4715-b502-eccb06cc4e57)](https://lewhunt.github.io/react-tv-player/)
 
 <p align='center'><i>Click on the image to try out the demo on a desktop browser</i>
 
@@ -33,21 +33,20 @@ npm install react-tv-player
 import React from "react";
 import { TVPlayer } from "react-tv-player";
 
-// Render a YouTube video player for TV
-<TVPlayer url="https://www.youtube.com/watch?v=SkVqJ1SGeL0" />;
+function App() {
+  return (
+    <>
+      <TVPlayer url="https://www.youtube.com/watch?v=SkVqJ1SGeL0" />
+    </>
+  );
+}
 ```
 
-### Key Features
+<hr>
 
-- <b>Versatility</b>: Customisable UI buttons, metadata and preview images to suit your needs. It can effortlessly handle a variety of URLs, from local file paths and HLS/DASH streams to services like YouTube and SoundCloud.
-- <b>Intuitive Navigation</b>: The player has been designed with TV experiences in mind. Arrow key and cursor navigation make the user experience smooth and intuitive across big-screen platforms.
-- <b>YouTube Integration</b>: One of its unique strengths is its ability to play YouTube videos directly, saving the cost and hassle of additional media encoding.
-- <b>DRM Considerations</b>: While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing future integration with hls.js and dash.js for more DRM considerations.
-- <b>Broad Device Support</b>: From Amazon FireTV and Samsung Tizen to Xbox UWP and LG webOS, ReactTVPlayer covers a vast landscape of devices, especially those post-2018 with modern Chromium browsers.
+### [Live demo](https://lewhunt.github.io/react-tv-player/) (for desktop browsers)
 
-### Demo
-
-The <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with metadata, custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as the Like button.
+The <a href='https://lewhunt.github.io/react-tv-player/'>demo</a> source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with metadata, custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as the Like button.
 
 ```jsx
 <TVPlayer
@@ -61,9 +60,11 @@ The <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</
 />
 ```
 
-<p>Here is a short video of the <a title="view demo" href="https://lewhunt.github.io/react-tv-player">demo</a> runnning on a browser:</p>
+<p>Here is a short video of the <a title="view demo" href="https://lewhunt.github.io/react-tv-player/">demo</a> runnning on a browser:</p>
 
 https://github.com/lewhunt/react-tv-player/assets/9886284/7baa4b75-491b-49f3-8cf1-698ae7f55941
+
+<hr>
 
 ### Props
 
@@ -88,6 +89,8 @@ The full list of props are below. Media related values such as `playing`, `loop`
 | `mediaCount`    | Set the total `number` of media items if you have multiple media and want player to display next and previous buttons                                                                                                                                                                                                            | `0`          |
 | `mediaIndex`    | Set the initial media index `number` if you have multiple media and want player to handle next and previous buttons                                                                                                                                                                                                              | `0`          |
 
+<hr>
+
 ### Callback props
 
 Callback props take a function that gets fired on various player events and UI button actions:
@@ -108,6 +111,8 @@ Callback props take a function that gets fired on various player events and UI b
 | `onLikePress`        | Called when the Like button is pressed                                                                    |
 | `onLoopPress`        | Called when the Loop button is pressed                                                                    |
 | `onMutePress`        | Called when the Mute button is pressed                                                                    |
+
+<hr>
 
 ### Custom Buttons
 
@@ -152,6 +157,8 @@ const customButtons: TVPlayerButtonProps[] = [
 | `isSelectedFill` | Allows support of toggle behaviour (in the form of a button fill) when set to true.                                                  |
 | `disable`        | Prevents button action when set to true.                                                                                             |
 
+<hr>
+
 ### useTVPlayerStore hook
 
 For more control you can import the `useTVPlayerStore` custom hook to globally access player state (zustand store). View the sample app and the `TVPlayerUI` inner component for examples of use. Below shows the basics:
@@ -188,6 +195,8 @@ const customSeek = () => player.seekTo(player.getCurrentTime() + 10);
 />;
 ```
 
+<hr>
+
 ### Instance Methods
 
 Use the state's `player` reference - as in the above example - to call instance methods on the player.
@@ -200,30 +209,34 @@ Use the state's `player` reference - as in the above example - to call instance 
 | `getDuration()`        | Returns the duration (in seconds) of the currently playing media<br />&nbsp; ◦ &nbsp;Returns `null` if duration is unavailable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `getInternalPlayer()`  | Returns the internal player of whatever is currently playing<br />&nbsp; ◦ &nbsp;eg the [YouTube player instance](https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player), or the [`<video>`](https://developer.mozilla.org/en/docs/Web/HTML/Element/video) element when playing a video file<br />&nbsp; ◦ &nbsp;Use `getInternalPlayer('hls')` to get the [hls.js](https://github.com/video-dev/hls.js) player<br />&nbsp; ◦ &nbsp;Use `getInternalPlayer('dash')` to get the [dash.js](https://github.com/Dash-Industry-Forum/dash.js) player<br />&nbsp; ◦ &nbsp;Returns `null` if the internal player is unavailable |
 
+<hr>
+
 ### DRM Support
 
-It supports HLS AES Encryption, but it currently does not support Widevine, FairPlay or PlayReady DRM out of the box. However, when playing streams it renders a `hls.js` and `dash.js` video element which can be accessed with the `getInternalPlayer()` instance method. So there is scope to hook into this for further DRM integration. More DRM work is on the future roadmap.
+While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing future integration with hls.js and dash.js for more DRM considerations.
 
 ### Device Support
 
-The library has been put through some initial testing on desktop web browsers and TV web app platforms such as Amazon FireTV, Samsung Tizen, Xbox UWP and LG webOS. More checks will be carried out over the next few months. Generally TV devices post-2018 will be better supported as they'll have more modern Chromium browsers.
+From Amazon FireTV and Samsung Tizen to Xbox, LG webOS and desktop browsers, ReactTVPlayer aims to cover a vast landscape of devices, especially those post-2018 with modern Chromium browsers.
 
-Due to various restrictions, React TV Player is not intended to work properly on smaller mobile devices. The UI is designed for widescreen displays and YouTube player documentation explains that certain mobile browsers require user interaction before playing.
+Note that it is not currently intended to work properly on smaller mobile devices. The UI is designed for widescreen displays and YouTube player documentation details that certain mobile browsers require user interaction before playing.
 
 You can use a desktop/laptop browser with arrow-keys to simulate the TV experience.
 
-### Background
+### Why another player?
 
-In the dynamic landscape of the TV industry, I've dedicated years to working with various media players. During this journey, two persistent challenges surfaced time and again: performant UI navigation and compatible streaming protocols. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
+In the dynamic landscape of the OTT TV industry, I've dedicated years working with various players. During this journey, two persistent challenges surfaced time and again: performant UI and media encodings. These hurdles often forced us to heavily customise players and tackle media encoding difficulties, leading to added costs and frustrating delays. 😫
 
-#### Why React TV Player?
+Enter ReactTVPlayer, an open-source component that aims to lower the barrier to entry and seamlessly integrates with your React applications...
 
-Enter React TV Player, an innovative open-source component that seamlessly integrates with your React applications. It brings forth a player tailored for TV experiences, complete with customisable UI buttons and intuitive arrow key <i>plus</i> cursor navigation. 📺 🎮
+### What Sets It Apart?
 
-#### What Sets It Apart?
+It's designed for TV experiences out of the box, complete with customisable UI buttons and intuitive arrow key plus cursor navigation. 🎮 In addition to handling HLS and Dash streams effortlessly, it tackles the formidable challenge of playing YouTube and Vimeo urls directly on TV. Supporting YouTube/Vimeo eliminates the need for custom media encoding when it's not always necessary or even affordable. 🎉
 
-But that's not all. React TV Player isn't just another player. It's a versatile solution that handles HLS and Dash streams effortlessly. What's more, it tackles the formidable challenge of playing YouTube videos - yes YouTube - eliminating the need for custom media encoding when it's not necessary. :tada:
-
-#### How Does It Work?
+### How Does It Work?
 
 Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
+
+<hr>
+
+### [Live Demo](https://lewhunt.github.io/react-tv-player/) (for desktop browsers)
