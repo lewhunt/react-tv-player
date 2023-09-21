@@ -25,7 +25,7 @@
 
 ## Key Features
 
-- <b>Versatility</b>: Customisable UI buttons, title metadata and preview images to suit your needs. It can effortlessly handle a variety of URLs, from file paths and HLS/DASH streams to services like YouTube, Vimeo and SoundCloud.
+- <b>Versatility</b>: Customisable UI buttons, title metadata and preview images to suit your needs. It can effortlessly handle a variety of URLs, from file paths and HLS/DASH streams to services like YouTube and Vimeo.
 - <b>Intuitive Navigation</b>: The player has been designed with TV experiences in mind. Cursor and arrow-key navigation make the user experience smooth and intuitive across big-screen platforms.
 - <b>YouTube Integration</b>: One of its unique strengths is its ability to play YouTube and Vimeo videos directly, saving the cost and hassle of additional media encoding.
 - <b>DRM Considerations</b>: While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing future DRM integration with hls.js and dash.js.
