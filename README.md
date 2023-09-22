@@ -1,9 +1,5 @@
 <h1 align='center'>
-<span style="border: 1px solid black; padding: 2px 12px">
-  <span style="font-weight:200">REACT</span>
-<span style="font-weight:800;">TV</span>
-<span style="font-weight:200">PLAYER</span>
-</span>
+  React TV Player
 </h1>
 
 <p align='center'>
