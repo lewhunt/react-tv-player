@@ -26,7 +26,7 @@ A React media player component designed for TV devices, aiming to simplify playb
 
 - <b>Versatility</b>: Customisable UI buttons, title metadata and preview images to suit your needs. It can effortlessly handle a variety of URLs, from mp4 file paths and HLS/DASH streams to services like YouTube and Vimeo.
 - <b>Intuitive Navigation</b>: The player has been designed with TV experiences in mind. Cursor and arrow-key navigation make the user experience smooth and intuitive across big-screen platforms.
-- <b>YouTube Integration</b>: One of its unique strengths is its ability to play URLs directly from the likes of YouTube, Vimeo, SoundCloud and Twitch, eliminating the need for additional video encodings.
+- <b>YouTube Integration</b>: One of its unique strengths is its ability to play URLs directly from the likes of YouTube, Vimeo, SoundCloud and Twitch, eliminating the need for additional video encoding when it's not needed.
 - <b>DRM Considerations</b>: While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing for future DRM integration with hls.js and dash.js.
 - <b>Broad Device Support</b>: From Amazon Fire TV, LG webOS and Samsung Tizen Smart TVs to Xbox consoles and desktop web browsers, ReactTVPlayer covers a vast landscape of big-screen devices, especially those post-2017 with modern Chromium browsers.
 
