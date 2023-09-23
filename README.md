@@ -16,7 +16,7 @@
 </p>
 
 <p align='center'>
-A React player component designed for TV devices. With a customizable UI and arrow-key navigation, it can play a variety of urls like mp4, Dash/HLS streams and even YouTube - saving the cost and hassle of additional media encodings.</p>
+A React player component designed for TV devices. With a customizable UI and arrow-key navigation, it can play a variety of urls like mp4, Dash/HLS streams and even YouTube - saving the pains of additional media encodings.</p>
 
 [![https://lewhunt.github.io/react-tv-player/](https://repository-images.githubusercontent.com/688997852/cc39ebd0-f663-4715-b502-eccb06cc4e57)](https://lewhunt.github.io/react-tv-player/)
 
