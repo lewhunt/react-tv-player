@@ -16,23 +16,13 @@
 </p>
 
 <p align='center'>
-A React media player component for TV devices. With a custom UI and arrow-key navigation, it can play a variety of URLs like mp4, HLS/Dash streams and even YouTube & Vimeo links directly. Check out the demo via a desktop browser to see how it can help simplify playback in big-screen web apps.</p>
+A React media player component for TV devices. With custom UI and arrow-key navigation, it can play a variety of URLs like file paths, HLS/DASH streams and even YouTube & Vimeo links directly. Packaged as an npm library for easy integration.</p>
 
 [![https://lewhunt.github.io/react-tv-player/](https://repository-images.githubusercontent.com/688997852/cc39ebd0-f663-4715-b502-eccb06cc4e57)](https://lewhunt.github.io/react-tv-player/)
 
 <p align='center'><i>Click on the image to try out the demo on a desktop browser</i>
 
-## Key Features
-
-- <b>Versatility</b>: Customisable UI buttons, title metadata and preview images to suit your needs. It can effortlessly handle a variety of URLs, from mp4 file paths and HLS/DASH streams to services like YouTube and Vimeo.
-- <b>Intuitive Navigation</b>: The player has been designed with TV experiences in mind. Cursor and arrow-key navigation make the user experience smooth and intuitive across big-screen platforms.
-- <b>YouTube Integration</b>: One of its unique strengths is its ability to play URLs directly from the likes of YouTube, Vimeo, SoundCloud and Twitch, eliminating the need for additional video encoding when it's not needed.
-- <b>DRM Considerations</b>: While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing for future DRM integration with hls.js and dash.js.
-- <b>Broad Device Support</b>: From Amazon Fire TV, LG webOS and Samsung Tizen Smart TVs to Xbox consoles and desktop web browsers, ReactTVPlayer covers a vast landscape of big-screen devices, especially those post-2017 with modern Chromium browsers.
-
 ## Installation
-
-It has been built and published as an npm package for easy install:
 
 ```bash
 npm install react-tv-player
@@ -40,7 +30,7 @@ npm install react-tv-player
 
 ## Usage
 
-Then just import the player and render it in your app or page:
+Just import the player and render it in your app or page with [props](#props):
 
 ```jsx
 import { TVPlayer } from "react-tv-player";
@@ -54,9 +44,9 @@ function App() {
 }
 ```
 
-### [👉 Live Demo](https://lewhunt.github.io/react-tv-player/) (for desktop browsers)
+### [👉 Try out the Demo](https://lewhunt.github.io/react-tv-player/) (on TV and desktop browsers)
 
-The <a href='https://lewhunt.github.io/react-tv-player/'>demo</a> source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with with more props such as metadata, custom buttons, preview images and multiple media, enabling the user to cycle through videos with next/previous buttons and handle actions such as a Like button.
+The demo source code <a href='https://github.com/lewhunt/react-tv-player/blob/main/src/App.tsx'>App.tsx</a> illustrates how the component can be initialised with more [props](#props) such as metadata, [custom buttons](#custom-buttons), preview images and multiple media, enabling the user to cycle through videos with next/previous buttons:
 
 ```jsx
 <TVPlayer
@@ -87,6 +77,14 @@ It's designed for TV experiences out of the box, complete with customisable UI b
 ## How Does It Work?
 
 Under the hood, this component harnesses the power of open-source libraries like Norigin Media's <a href="https://github.com/NoriginMedia/Norigin-Spatial-Navigation">spatial navigation</a> hook. It builds upon the excellence of <a href="https://github.com/cookpete/react-player">React Player</a>, which utilises <a href="https://github.com/video-dev/hls.js">hls.js</a> and <a href="https://github.com/Dash-Industry-Forum/dash.js">dash.js</a>. Powered by React TypeScript (although you don't need to use TypeScript to make the most of it), this library is packaged efficiently using <a href="https://vitejs.dev/">Vite</a>, making integration a breeze. 🙌
+
+## Key Features
+
+- <b>Versatility</b>: Customisable UI buttons, title metadata and preview images to suit your needs. It can effortlessly handle a variety of URLs, from mp4 file paths and HLS/DASH streams to services like YouTube and Vimeo.
+- <b>Intuitive Navigation</b>: The player has been designed with TV experiences in mind. Cursor and arrow-key navigation make the user experience smooth and intuitive across big-screen platforms.
+- <b>YouTube Integration</b>: One of its unique strengths is its ability to play URLs directly from the likes of YouTube, Vimeo, SoundCloud and Twitch, eliminating the need for additional video encoding when it's not needed.
+- <b>DRM Considerations</b>: While it supports HLS AES Encryption, it’s built with flexibility in mind, allowing for future DRM integration with hls.js and dash.js.
+- <b>Broad Device Support</b>: From Amazon Fire TV, LG webOS and Samsung Tizen Smart TVs to Xbox consoles and desktop web browsers, ReactTVPlayer covers most big-screen devices running web apps with post-2017 Chromium browsers.
 
 <hr>
 
