@@ -16,7 +16,7 @@
 </p>
 
 <p align='center'>
-A React media player component for TV devices. With custom UI and arrow-key navigation, it can play a variety of URLs like file paths, HLS/DASH streams and even YouTube & Vimeo links directly. Packaged as an npm library for easy integration.</p>
+A React media player component for TV devices. With custom UI and arrow-key navigation, it can play a variety of URLs like file paths, HLS/DASH streams and even YouTube & Vimeo links directly. Packaged as an npm library.</p>
 
 [![https://lewhunt.github.io/react-tv-player/](https://repository-images.githubusercontent.com/688997852/cc39ebd0-f663-4715-b502-eccb06cc4e57)](https://lewhunt.github.io/react-tv-player/)
 
