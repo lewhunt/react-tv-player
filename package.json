@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
+    "start": "npm run dev -- --port 3000 --host",
     "build": "tsc && vite build",
     "deploy": "gh-pages -d demo",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
