@@ -14,24 +14,10 @@ export type MediaType = {
 
 const mediaList: MediaType[] = [
   {
-    url: "https://www.youtube.com/watch?v=SkVqJ1SGeL0",
-    title: "YouTube Video Sample",
-    subTitle: "Caminandes 3: Llamigos",
-    preview: true,
-  },
-  {
-    url: "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-    title: "HLS Stream Sample",
-    subTitle: "Tears of Steel",
-    preview:
-      "https://mango.blender.org/wp-content/gallery/4k-renders/06_barley.jpg",
-  },
-  {
-    title: "Dash Stream Sample",
-    subTitle: "Elephants Dream",
-    url: "https://rdmedia.bbc.co.uk/elephants_dream/1/client_manifest-all.mpd",
-    preview:
-      "https://orange.blender.org/wp-content/themes/orange/images/media/gallery/s1_proog.jpg",
+    url: "https://iandevlin.github.io/mdn/video-player-with-captions/video/sintel-short.mp4",
+    title: "MP4 Sample with Styled Subtitles",
+    subTitle: "Sintel",
+    preview: "https://i.ytimg.com/vi/eRsGyueVLvQ/hqdefault.jpg",
   },
 ];
 
@@ -76,6 +62,34 @@ function App() {
         mediaIndex={0}
         onLikePress={handleLike}
         playsinline={true}
+        config={{
+          file: {
+            attributes: {
+              crossOrigin: "true",
+            },
+            tracks: [
+              {
+                kind: "subtitles",
+                src: "https://iandevlin.github.io/mdn/video-player-with-captions/subtitles/vtt/sintel-en.vtt",
+                srcLang: "en",
+                default: true,
+                label: "en",
+              },
+              {
+                kind: "subtitles",
+                src: "https://iandevlin.github.io/mdn/video-player-with-captions/subtitles/vtt/sintel-de.vtt",
+                srcLang: "de",
+                label: "de",
+              },
+              {
+                kind: "subtitles",
+                src: "https://iandevlin.github.io/mdn/video-player-with-captions/subtitles/vtt/sintel-es.vtt",
+                srcLang: "es",
+                label: "es",
+              },
+            ],
+          },
+        }}
       />
     </>
   );
