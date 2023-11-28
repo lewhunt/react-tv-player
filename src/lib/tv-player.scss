@@ -23,6 +23,16 @@ body,
     top: 0;
     left: 0;
   }
+  video {
+    position: relative;
+    height: auto !important;
+    top: 50%;
+    transform: translateY(-50%);
+    &::cue {
+      color: pink;
+      font-size: 50px;
+    }
+  }
 }
 
 img.yt-preview {
