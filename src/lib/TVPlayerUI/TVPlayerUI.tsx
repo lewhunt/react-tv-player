@@ -60,6 +60,7 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
     onFullscreenPress,
     withTopCover,
     customButtons,
+    disableFullscreen,
   } = props;
   const { focusKey, ref } = useFocusable();
 
@@ -93,7 +94,7 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
     { action: hasMedias ? "previous" : "skipback" },
     { action: "playpause" },
     { action: hasMedias ? "next" : "skipforward" },
-    { action: "mute", align: "right" },
+    { action: disableFullscreen ? "fullscreen" : "mute", align: "right" },
   ];
 
   const toggleLoop = () => {
