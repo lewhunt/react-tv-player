@@ -18,6 +18,7 @@ export const useTVPlayerStore = create<TVPlayerProps>()((set) => ({
     setActivity: (activity: boolean) => set({ activity }),
     setCustomToggle: (customToggle: boolean) => set({ customToggle }),
     setDuration: (duration: number) => set({ duration }),
+    setFullscreen: (fullscreen: boolean) => set({ fullscreen }),
     setLight: (light: boolean) => set({ light }),
     setLikeToggle: (likeToggle: boolean) => set({ likeToggle }),
     setLoop: (loop: boolean) => set({ loop }),

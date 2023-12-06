@@ -17,6 +17,8 @@ import {
   faEllipsis,
   faForwardStep,
   faBackwardStep,
+  faExpand,
+  faCompress,
   faHeart as faHeartSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
@@ -55,6 +57,7 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
     onSkipReleasePress,
     onNextPress,
     onMutePress,
+    onFullscreenPress,
     withTopCover,
     customButtons,
   } = props;
@@ -67,6 +70,7 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
   const actions = useTVPlayerStore((s) => s.actions);
   const activity = useTVPlayerStore((s) => s.activity);
   const duration = useTVPlayerStore((s) => s.duration);
+  const fullscreen = useTVPlayerStore((s) => s.fullscreen);
   const light = useTVPlayerStore((s) => s.light);
   const likeToggle = useTVPlayerStore((s) => s.likeToggle);
   const loop = useTVPlayerStore((s) => s.loop);
@@ -105,6 +109,11 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
   const toggleMuted = () => {
     actions.setMuted(!muted);
     onMutePress?.();
+  };
+
+  const toggleFullscreen = () => {
+    actions.setFullscreen(!fullscreen);
+    onFullscreenPress?.();
   };
 
   const handlePrevious = () => {
@@ -188,6 +197,12 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
       onPress: toggleMuted,
       faIcon: muted ? faVolumeMute : faVolumeHigh,
     },
+    fullscreen: {
+      action: "fullscreen",
+      label: fullscreen ? "Minimise" : "Fullscreen",
+      onPress: toggleFullscreen,
+      faIcon: fullscreen ? faCompress : faExpand,
+    },
     custom: {
       action: "custom",
       label: "Custom",
@@ -242,8 +257,8 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
       className="tv-player-ui"
       data-testid="tv-player-ui"
       style={{
-        width: props.width || "100%",
-        height: props.height || div100vh || "100%",
+        width: fullscreen ? "100%" : props.width || "100%",
+        height: fullscreen ? div100vh || "100%" : props.height || "300px",
       }}
     >
       <div

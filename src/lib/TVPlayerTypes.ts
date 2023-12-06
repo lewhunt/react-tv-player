@@ -3,6 +3,7 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 type TVPlayerButtonAction =
   | "custom"
+  | "fullscreen"
   | "like"
   | "loop"
   | "mute"

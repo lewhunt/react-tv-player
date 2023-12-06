@@ -38,6 +38,7 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
   const muted = useTVPlayerStore((s) => s.muted);
   const playing = useTVPlayerStore((s) => s.playing);
   const activity = useTVPlayerStore((s) => s.activity);
+  const fullscreen = useTVPlayerStore((s) => s.fullscreen);
 
   const youtubeId =
     typeof props.url === "string" && extractYouTubeIdFromUrl(props.url);
@@ -77,12 +78,23 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
 
   useEffect(() => actions.setTitle(props.title), [props.title]);
   useEffect(() => actions.setSubTitle(props.subTitle), [props.subTitle]);
+  useEffect(() => {
+    actions.setFullscreen(!props.disableFullscreen);
+  }, [props.disableFullscreen]);
   useEffect(() => actions.setLoop(props.loop), [props.loop]);
   useEffect(() => actions.setMuted(props.muted), [props.muted]);
   useEffect(() => actions.setMediaCount(props.mediaCount), [props.mediaCount]);
   useEffect(() => {
     setTimeout(() => actions.setMediaIndex(props.mediaIndex));
   }, [props.mediaIndex]);
+
+  useEffect(() => {
+    document.body.style.background = fullscreen ? "black" : "unset";
+    document.body.style.overflow = fullscreen ? "hidden" : "unset";
+    document.body.style.padding = fullscreen ? "0" : "revert";
+    document.body.style.margin = fullscreen ? "0" : "revert";
+    wrapperRef.current!.style.height = fullscreen ? "100vh" : "unset";
+  }, [fullscreen]);
 
   const handlePreview = () => {
     actions.setPlaying(true);
@@ -151,8 +163,8 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
         data-testid="react-player"
         ref={playerRef}
         url={props.url}
-        width={props.width || "100%"}
-        height={props.height || "100%"}
+        width={fullscreen ? "100%" : props.width || "100%"}
+        height={fullscreen ? "100%" : props.height || "300px"}
         light={!playing && light}
         controls={props.controls}
         playIcon={props.playIcon || <></>}
@@ -192,7 +204,10 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
         onError={() => setYtPreviewError(true)}
         onLoad={handleYtPreviewLoad}
         alt=""
-        style={{ width: props.width || "100%", height: props.height || "100%" }}
+        style={{
+          width: fullscreen ? "100%" : props.width || "100%",
+          height: fullscreen ? "100%" : props.height || "300px",
+        }}
         className={cn("yt-preview", {
           show: !ytPreviewError && light && youtubeId && !playing,
         })}
