@@ -164,7 +164,7 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
         ref={playerRef}
         url={props.url}
         width={fullscreen ? "100%" : props.width || "100%"}
-        height={fullscreen ? "100%" : props.height || "300px"}
+        height={fullscreen ? "100%" : props.height || "350px"}
         light={!playing && light}
         controls={props.controls}
         playIcon={props.playIcon || <></>}
@@ -206,7 +206,7 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
         alt=""
         style={{
           width: fullscreen ? "100%" : props.width || "100%",
-          height: fullscreen ? "100%" : props.height || "300px",
+          height: fullscreen ? "100%" : props.height || "350px",
         }}
         className={cn("yt-preview", {
           show: !ytPreviewError && light && youtubeId && !playing,

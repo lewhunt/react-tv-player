@@ -259,7 +259,7 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
       data-testid="tv-player-ui"
       style={{
         width: fullscreen ? "100%" : props.width || "100%",
-        height: fullscreen ? div100vh || "100%" : props.height || "300px",
+        height: fullscreen ? div100vh || "100%" : props.height || "350px",
       }}
     >
       <div
