@@ -46,7 +46,7 @@ function App() {
     { action: "previous", align: "center" },
     { action: "playpause", align: "center" },
     { action: "next", align: "center" },
-    { action: "fullscreen", align: "right" },
+    { action: "mute", align: "right" },
     {
       action: "custom",
       align: "right",
