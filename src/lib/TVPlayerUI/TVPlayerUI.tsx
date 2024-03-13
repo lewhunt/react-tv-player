@@ -235,6 +235,12 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
                 }
                 key={index}
                 disabled={button.disabled || buttonMap[button.action].disabled}
+                handleArrowPress={(dir) => {
+                  if (dir === "up") {
+                    actions.setActivity(false);
+                  }
+                  return true;
+                }}
               >
                 <FontAwesomeIcon
                   icon={
