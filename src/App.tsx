@@ -76,6 +76,7 @@ function App() {
         mediaIndex={0}
         onLikePress={handleLike}
         playsinline={true}
+        hideControlsOnArrowUp={true}
       />
     </>
   );
