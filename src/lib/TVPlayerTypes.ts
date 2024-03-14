@@ -37,4 +37,5 @@ export interface TVPlayerProps extends ReactPlayerProps {
   subTitle?: string | null;
   title?: string | null;
   withTopCover?: boolean;
+  hideControlsOnArrowUp?: boolean;
 }

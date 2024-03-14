@@ -61,6 +61,7 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
     withTopCover,
     customButtons,
     disableFullscreen,
+    hideControlsOnArrowUp,
   } = props;
   const { focusKey, ref } = useFocusable();
 
@@ -236,7 +237,7 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
                 key={index}
                 disabled={button.disabled || buttonMap[button.action].disabled}
                 handleArrowPress={(dir) => {
-                  if (dir === "up") {
+                  if (hideControlsOnArrowUp && dir === "up") {
                     actions.setActivity(false);
                   }
                   return true;
