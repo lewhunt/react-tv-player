@@ -236,4 +236,15 @@ Use the state's `player` reference - as in the above example - to call instance 
 
 <hr />
 
+## Support
+
+I hope this has given a good intro to the component.
+
+[💬 Fire over a comment](https://github.com/lewhunt/react-tv-player/issues) if you have any feedback, requests or issues 🐛
+
+[⭐ Give it a star](https://github.com/lewhunt/react-tv-player) if you like the component or want to bookmark it 🙏
+
+<br/>
+
 ### [👉 Try out the Demo](https://lewhunt.github.io/react-tv-player/) (on TV and desktop browsers)
+
