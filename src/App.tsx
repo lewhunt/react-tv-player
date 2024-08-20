@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { TVPlayer, useTVPlayerStore, TVPlayerButtonProps } from "./lib";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./App.css";
@@ -39,6 +40,7 @@ function App() {
   const actions = useTVPlayerStore((s) => s.actions);
   const mediaIndex = useTVPlayerStore((s) => s.mediaIndex) || 0;
   const likeToggle = useTVPlayerStore((s) => s.likeToggle);
+  const fullscreen = useTVPlayerStore((s) => s.fullscreen);
 
   const customButtons: TVPlayerButtonProps[] = [
     { action: "loop", align: "left" },
@@ -46,7 +48,7 @@ function App() {
     { action: "previous", align: "center" },
     { action: "playpause", align: "center" },
     { action: "next", align: "center" },
-    { action: "mute", align: "right" },
+    { action: "fullscreen", align: "right" },
     {
       action: "custom",
       align: "right",
@@ -64,6 +66,14 @@ function App() {
     actions.setLikeToggle(!likeToggle);
   };
 
+  // example of toggling global CSS stylings based on fullscreen state
+  useEffect(() => {
+    document.body.style.background = fullscreen ? "black" : "unset";
+    document.body.style.overflow = fullscreen ? "hidden" : "unset";
+    document.body.style.padding = fullscreen ? "0" : "revert";
+    document.body.style.margin = fullscreen ? "0" : "revert";
+  }, [fullscreen]);
+
   return (
     <>
       <TVPlayer
@@ -77,6 +87,8 @@ function App() {
         onLikePress={handleLike}
         playsinline={true}
         hideControlsOnArrowUp={true}
+        disableFullscreen={false}
+        disableInitNav={false}
       />
     </>
   );

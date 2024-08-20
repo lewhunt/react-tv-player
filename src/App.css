@@ -1,0 +1,11 @@
+body {
+  background: black;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  :focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
+}
