@@ -66,6 +66,19 @@ function App() {
     actions.setLikeToggle(!likeToggle);
   };
 
+  // Called when an error occurs whilst attempting to play media
+  const handleError = (
+    error: any,
+    data: any,
+    hlsInstance: any,
+    hlsGlobal: any
+  ) => {
+    console.log("error: ", error);
+    console.log("data (optional): ", data);
+    console.log("hlsInstance (optional): ", hlsInstance);
+    console.log("hlsGlobal (optional): ", hlsGlobal);
+  };
+
   // example of toggling global CSS stylings based on fullscreen state
   useEffect(() => {
     document.body.style.background = fullscreen ? "black" : "unset";
@@ -85,6 +98,7 @@ function App() {
         mediaCount={mediaList.length}
         mediaIndex={0}
         onLikePress={handleLike}
+        onError={handleError}
         playsinline={true}
         hideControlsOnArrowUp={true}
         disableFullscreen={false}
