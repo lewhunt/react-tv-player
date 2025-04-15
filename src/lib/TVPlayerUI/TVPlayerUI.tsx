@@ -309,7 +309,8 @@ export const TVPlayerUI: React.FC<TVPlayerProps> = (props) => {
 function ProgressBar(props: any) {
   const { currentTime, duration, player, handleSkipForward, handleSkipBack } =
     props;
-  const progressPercentage = (currentTime / duration) * 100;
+  const rawPercentage = (currentTime / duration) * 100;
+  const progressPercentage = Math.min(100, rawPercentage);
 
   const handleSeekToPosition = (event: React.MouseEvent<HTMLDivElement>) => {
     const innerDiv = event.currentTarget;
