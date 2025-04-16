@@ -3,7 +3,7 @@
   "author": "Lewis Hunt",
   "description": "A React media player component for TV devices. With custom UI and arrow-key navigation, it can play a variety of URLs like file paths, HLS/DASH streams and even YouTube & Vimeo links directly. Packaged as an npm library for easy integration.",
   "private": false,
-  "version": "1.1.10",
+  "version": "1.1.12",
   "type": "module",
   "homepage": "https://lewhunt.github.io/react-tv-player",
   "repository": "https://github.com/lewhunt/react-tv-player.git",
@@ -50,13 +50,13 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "gh-pages": "^6.0.0",
     "jsdom": "^22.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.65.1",
     "typescript": "^5.0.2",
     "vite": ">=4.5.3",
-    "vite-plugin-dts": "^3.5.2",
-    "vitest": "^0.34.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "vite-plugin-dts": "^4.5.3",
+    "vitest": "^3.1.1"
   },
   "files": [
     "dist"
@@ -67,8 +67,7 @@
   "exports": {
     ".": {
       "import": "./dist/react-tv-player.js",
-      "require": "./dist/react-tv-player.umd.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/react-tv-player.umd.js"
     }
   },
   "keywords": [
