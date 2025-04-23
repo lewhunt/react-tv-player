@@ -1,7 +1,8 @@
 import cn from "classnames";
 import React, { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
-import { init } from "@noriginmedia/norigin-spatial-navigation";
+import { pause, resume, init } from "@noriginmedia/norigin-spatial-navigation";
+
 import { useTVPlayerStore } from "./TVPlayerStore";
 import { TVPlayerProps } from "./TVPlayerTypes";
 import { TVPlayerUI } from "./TVPlayerUI";
@@ -60,6 +61,11 @@ export const TVPlayer: React.FC<TVPlayerProps> = (props) => {
           : `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
     }
   };
+
+  useEffect(() => {
+    props.disableNav ? pause() : resume();
+    return () => resume();
+  }, [props.disableNav]);
 
   useEffect(() => {
     actions.setLight(props.light);

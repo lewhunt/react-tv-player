@@ -103,6 +103,7 @@ function App() {
         hideControlsOnArrowUp={true}
         disableFullscreen={false}
         disableInitNav={false}
+        disableNav={false}
       />
     </>
   );

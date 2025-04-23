@@ -40,4 +40,5 @@ export interface TVPlayerProps extends ReactPlayerProps {
   hideControlsOnArrowUp?: boolean;
   disableFullscreen?: boolean;
   disableInitNav?: boolean;
+  disableNav?: boolean;
 }
